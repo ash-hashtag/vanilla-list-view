@@ -1,0 +1,24 @@
+{
+  "name": "vanilla-list-view",
+  "version": "0.0.1",
+  "description": "A Vanilla List View HTML Element with better performance when rendering a big list of items",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ash-hashtag/vanilla-list-view.git"
+  },
+  "keywords": [
+    "vanilla",
+    "list",
+    "view"
+  ],
+  "author": "ash hashtag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ash-hashtag/vanilla-list-view/issues"
+  },
+  "homepage": "https://github.com/ash-hashtag/vanilla-list-view#readme"
+}
