@@ -4,21 +4,24 @@
   "description": "A Vanilla List View HTML Element with better performance when rendering a big list of items",
   "main": "dist/index.js",
   "scripts": {
-    "test": "npm run test"
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ash-hashtag/vanilla-list-view.git"
   },
   "keywords": [
-    "vanilla",
-    "list",
-    "view"
+    "vanilla-list-view",
+    "list view",
+    "virtual scroll"
   ],
   "author": "ash hashtag",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ash-hashtag/vanilla-list-view/issues"
   },
-  "homepage": "https://github.com/ash-hashtag/vanilla-list-view#readme"
+  "homepage": "https://github.com/ash-hashtag/vanilla-list-view#readme",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  }
 }
