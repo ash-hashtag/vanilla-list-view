@@ -36,11 +36,14 @@ class ListView extends HTMLElement {
         this.lastScrollOffset = this.scrollTop;
     }
     render() {
-        for (var i = 0; i < this.itemExtent; i++) {
+        for (var i = 0; i < this.itemExtent && i < this.itemCount; i++) {
             this.appendChild(this.itemBuilder(i));
         }
     }
     onScroll() {
+        if (this.itemCount < this.itemExtent) {
+            return;
+        }
         const children = this.children;
         const scrollTop = this.scrollTop;
         if (children.length > this.threshold) {
@@ -121,9 +124,16 @@ class ListView extends HTMLElement {
                 }
             }
         }
+        else {
+            if (this.itemCount < this.itemExtent) {
+                for (var i = this.itemCount; i < Math.min(itemCount, this.itemExtent); i++) {
+                    this.appendChild(this.itemBuilder(i));
+                }
+            }
+        }
         this.itemCount = itemCount;
         if (clearCache) {
-            this.cachedElements.clear();
+            this.clearCache();
         }
     }
     clearCache() {
@@ -145,6 +155,9 @@ class ListView extends HTMLElement {
             }
         }
         this.cachedElements.set(index, element);
+    }
+    get itemLength() {
+        return this.itemCount;
     }
 }
 ListView.indexAttribute = "list-index";

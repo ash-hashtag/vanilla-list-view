@@ -25,4 +25,5 @@ export declare class ListView extends HTMLElement {
     updateItemCount(itemCount: number, clearCache?: boolean): void;
     clearCache(): void;
     private updateCache;
+    get itemLength(): number;
 }
